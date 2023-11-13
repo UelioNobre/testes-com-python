@@ -36,3 +36,9 @@ Depois de criado o ambiente virtual para aplicação e o ambiente estiver ativad
 ```bash
 $ deactivate
 ```
+
+#### Checando o ambiente virtual
+Para verificar qual a origem do Python utilizado na aplicação, utlize o comando:
+```bash
+$ which python3
+```
