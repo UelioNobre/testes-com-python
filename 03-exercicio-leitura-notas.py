@@ -14,6 +14,19 @@ def carregar_arquivos_notas(caminho_arquivo):
   
   return pessoas
 
+def filtro_pessoas_reprovadas(pessoas):
+  if pessoas == None:
+    raise ValueError("Lista de pessoas esta vazia")
+
+  pessoas_reprovadas = []
+  for pessoa in pessoas:
+    nome, nota = pessoa.replace("\n", "").split(" ")
+    if int(nota) < 6:
+      pessoas_reprovadas.append(nome + "\n")
+  
+  return pessoas_reprovadas
+
+
 def processar_pessoas_reprovadas(caminho_arquivo):
   try:
     notas1 = carregar_arquivos_notas(caminho_arquivo)
