@@ -26,6 +26,15 @@ def filtro_pessoas_reprovadas(pessoas):
   
   return pessoas_reprovadas
 
+def escrever_arquivo(caminho, conteudo):
+  try:
+    with open(caminho, 'w') as arquivo:
+      arquivo.writelines(conteudo)
+  except:
+    print(f":: ERROR :: Arquivo {caminho} não pode ser salvo!")
+    return
+  
+  print(f"Arquivo {caminho} salvo com sucesso!")
 
 def processar_pessoas_reprovadas(caminho_arquivo):
   try:
