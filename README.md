@@ -2,6 +2,10 @@
 
 ### Ambiente virtual
 
+<details>
+
+<summary>Ambiente Virtual com Python</summary>
+
 Para obter uma maior independência de uma aplicação em Python é interessante ter um ambiente isolado das dependências do projeto.
 
 Para isso, existe o Ambiente Virtual *(venv)*, que pode ser realizada com o seguinte comando:
@@ -42,3 +46,9 @@ Para verificar qual a origem do Python utilizado na aplicação, utlize o comand
 ```bash
 $ which python3
 ```
+
+</details>
+
+## Manipulando arquivos JSON
+
+Para manipular arquivos JSON, acesso o repositório de [exemplo](https://github.com/UelioNobre/testes-com-python/tree/main/02-entrada-e-saida-de-dados/manipulando-arquivos-json)
