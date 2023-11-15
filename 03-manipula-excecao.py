@@ -14,9 +14,15 @@ while len(notas_carregadas) < base_media:
     print(error_message, end="\n" * 2)
   
   else:
-    print(f"Nota {len(notas_carregadas)} carregada com sucesso!", end="\n" * 2)
+    print(f"... Nota {len(notas_carregadas)} carregada com sucesso!")
+  
+  finally:
+    print("... Preparando para carregar a próxima nota...")
 
 media = sum(notas_carregadas) / base_media
 
-print(f"Media das {base_media} notas {notas_carregadas}: ", media)
-print("\n"*2)
+print("\n" * 2)
+print(f"Notas lidas pelo sistema", notas_carregadas)
+print(f"Media das {base_media} notas {notas_carregadas} é: ", media)
+print("Fim!")
+print("\n" * 2)
