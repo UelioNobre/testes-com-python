@@ -14,6 +14,17 @@ def carregar_arquivos_notas(caminho_arquivo):
   
   return pessoas
 
+def escrever_arquivo(caminho, conteudo):
+  try:
+    with open(caminho, 'w') as arquivo:
+      arquivo.writelines(conteudo)
+  except:
+    print(f":: ERROR :: Arquivo {caminho} não pode ser salvo!")
+    return
+  
+  print(f"Arquivo {caminho} salvo com sucesso!")
+
+
 def filtro_pessoas_reprovadas(pessoas):
   if pessoas == None:
     raise ValueError("Lista de pessoas esta vazia")
@@ -25,16 +36,6 @@ def filtro_pessoas_reprovadas(pessoas):
       pessoas_reprovadas.append(nome + "\n")
   
   return pessoas_reprovadas
-
-def escrever_arquivo(caminho, conteudo):
-  try:
-    with open(caminho, 'w') as arquivo:
-      arquivo.writelines(conteudo)
-  except:
-    print(f":: ERROR :: Arquivo {caminho} não pode ser salvo!")
-    return
-  
-  print(f"Arquivo {caminho} salvo com sucesso!")
 
 def processar_pessoas_reprovadas(caminho_arquivo):
   try:
@@ -48,5 +49,4 @@ def processar_pessoas_reprovadas(caminho_arquivo):
 
 processar_pessoas_reprovadas(caminho_arquivo_inexistente)
 processar_pessoas_reprovadas(caminho_arquivo_existente)
-
-print("Fim!", end="\n"*2)
+print("Fim!", end="\n")
