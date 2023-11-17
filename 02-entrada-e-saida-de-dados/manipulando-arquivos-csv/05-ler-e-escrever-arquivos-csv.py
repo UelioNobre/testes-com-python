@@ -1,4 +1,3 @@
-import csv
 from rich import print
 from manipuladores_csv import read_csv_file, write_csv_file_hard_mode, department_filter
 
