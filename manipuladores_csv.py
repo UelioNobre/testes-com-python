@@ -33,4 +33,18 @@ def department_filter(payload):
   
   return group_by_department
 
+def read_csv_as_dict(caminho_arquivo):
+# lê os dados
+    with open(caminho_arquivo, encoding = "utf-8") as file:
+        graduacao_reader = csv.DictReader(file, delimiter=",", quotechar='"')
 
+        # A linha de cabeçalhos é utilizada como chave do dicionário
+        # agrupa cursos por departamento
+        group_by_department = {}
+        for row in graduacao_reader:
+            department = row["unidade_responsavel"]
+            if department not in group_by_department:
+                group_by_department[department] = 0
+            group_by_department[department] += 1
+    
+    return group_by_department
