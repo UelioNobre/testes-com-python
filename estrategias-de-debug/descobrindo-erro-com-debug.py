@@ -8,7 +8,11 @@ def map_factorial(numbers):
         try:
             result.append(factorial(num))
         except TypeError as err:
-            print(f"Não é possivel calcular o fatorial de {num}")
+            print("Erro de tipo")
+            print(f"Numero: {num}, Type: {type(num)}")
+            print(f"Erro: {err}", end="\n" * 3)
+        except ValueError as err:
+            print("Erro de valor")
             print(f"Numero: {num}, Type: {type(num)}")
             print(f"Erro: {err}", end="\n" * 3)
 
