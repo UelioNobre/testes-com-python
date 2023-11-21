@@ -5,14 +5,20 @@ def map_factorial(numbers):
     result = []
 
     for num in numbers:
-        result.append(factorial(num))
+        try:
+            result.append(factorial(num))
+        except TypeError as err:
+            print(f"Não é possivel calcular o fatorial de {num}")
+            print(f"Numero: {num}, Type: {type(num)}")
+            print(f"Erro: {err}", end="\n" * 3)
 
     return result
 
 
 def main():
-    input_list = [1, 2, 3, 4, 5]
-    return map_factorial(input_list)
+    input_list = ["um", 2, 3, 4, -5]
+    input_factorial = map_factorial(input_list)
+    print(input_factorial)
 
 
 if __name__ == "__main__":
