@@ -17,3 +17,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# O código acima parece que funciona bem, mas
+# Não há nenhuma nenhum instrução para saída de dados.
+# Sejam elas sys.stdout.write ou o BIF "print"
