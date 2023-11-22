@@ -1,17 +1,3 @@
-import pytest
-
-"""Usando Fixture
-
-Ao criar um metodo fixture, ele deve ser passado 
-com parametro, para a função de teste
-"""
-
-
-@pytest.fixture
-def my_list():
-    return [1, 2, 3]
-
-
 def test_um_teste_simples():
     assert True
 
@@ -27,9 +13,9 @@ como "afterAll/beforeAll"
 """
 
 
-def test_lista_com_multiplos_items(my_list):
-    assert [item * 3 for item in my_list] == [3, 6, 9]
+def test_lista_com_multiplos_items(listBeforeEachFixture):
+    assert [item * 3 for item in listBeforeEachFixture] == [3, 6, 9]
 
 
-def test_soma_os_itens_de_uma_lista_com_resultado_seis(my_list):
-    assert sum(my_list) + 1 == 7
+def test_soma_os_itens_de_uma_lista_com_resultado_seis(listBeforeEachFixture):
+    assert sum(listBeforeEachFixture) + 1 == 7
