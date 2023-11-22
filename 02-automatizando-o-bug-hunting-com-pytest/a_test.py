@@ -22,7 +22,7 @@ def test_multiplica_item_da_lista():
 
 
 """
-Este teste utiliza uma função do Pytest que age 
+Este teste utiliza uma função do Pytest que age
 como "afterAll/beforeAll"
 """
 
