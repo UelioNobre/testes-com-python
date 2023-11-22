@@ -29,3 +29,7 @@ como "afterAll/beforeAll"
 
 def test_lista_com_multiplos_items(my_list):
     assert [item * 3 for item in my_list] == [3, 6, 9]
+
+
+def test_soma_os_itens_de_uma_lista_com_resultado_seis(my_list):
+    assert sum(my_list) + 1 == 7
