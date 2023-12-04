@@ -6,6 +6,6 @@ class Printer:
     @staticmethod
     def imprime_cargo(instance: Any):
         if not isinstance(instance, IPerson):
-            print("Informe uma instancia de IPerson")
+            raise TypeError("Invalid instance type")
         else:
             instance.print_role()
