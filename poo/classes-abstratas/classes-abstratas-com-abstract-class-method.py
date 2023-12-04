@@ -13,7 +13,6 @@ class InterfaceFormal(ABC):
 class ClasseConcreta(InterfaceFormal):
     def exibir_mensagem(self):
         print("Olá mundo!")
-        pass
 
 
 # teste = InterfaceFormal() - TypeError
