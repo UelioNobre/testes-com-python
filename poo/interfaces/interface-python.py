@@ -6,10 +6,11 @@ class InterfaceFuncionario:
 
 
 class Funcionario(InterfaceFuncionario):
-    def calcular_salario(self):
-        return "Um calculo foi realizado"
+    # def calcular_salario(self):
+    #     return "Um calculo foi realizado"
+    pass
 
 
 funcionario1 = Funcionario()
-salario = funcionario1.calcular_salario()
-print(f"Operacao para calcular salario: {salario}")
+# salario = funcionario1.calcular_salario()
+# print(f"Operacao para calcular salario: {salario}")
