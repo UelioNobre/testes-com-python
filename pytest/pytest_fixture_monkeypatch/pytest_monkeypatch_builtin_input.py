@@ -1,8 +1,5 @@
 from funcoes_para_testar import show_message
-
-
-def mock_input_hello_world(_):
-    return "Hello world!"
+from mock_functions import mock_input_hello_world
 
 
 def test_show_message(monkeypatch):

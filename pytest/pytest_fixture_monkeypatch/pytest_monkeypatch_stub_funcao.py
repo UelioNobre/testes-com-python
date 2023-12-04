@@ -1,12 +1,5 @@
 import funcoes_para_testar
-
-
-def mock_input_user(_):
-    return "Que bela tarde!"
-
-
-def mock_msg():
-    print("Bom dia!")
+from mock_functions import mock_input_user, mock_msg
 
 
 def test_altera_mensagem_padrao(capsys, monkeypatch):
